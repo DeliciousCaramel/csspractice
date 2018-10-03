@@ -1,8 +1,9 @@
 :root {
+  --main-font: "Poppins", sans-serif;
   --facebook-dark-main: #4267b2;
   --facebook-dark-active: #1d4698;
-  --threed1: orangered;
-  --main-font: "Poppins", sans-serif;
+  --threeD1: orangered;
+  --threeD2: #ecd300;
 }
 
 html {
@@ -18,11 +19,9 @@ button {
   cursor: pointer;
 }
 
-.content {
-  text-align: center;
-}
-
-/* FACEBOOK BUTTONS */
+/* ===================
+ FACEBOOK BUTTONS 
+ =====================*/
 
 .facebook-style-btn {
   border-radius: 2px;
@@ -70,15 +69,88 @@ button {
 .facebook-style-light:hover {
   background: #e9ebee;
 }
+/* ===================
+ 3D BUTTONS 
+ =====================*/
 
-/* 3D BUTTONS */
+/* 3D BUTTON 1 */
 
 .btn-3d-1 {
-  background: var(--threed1);
-  border: 1px solid var(--threed1);
+  background: var(--threeD1);
+  border: none;
   color: white;
   font-size: 2rem;
   padding: 10px 20px;
   font-weight: bold;
   box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+  outline: none;
+  position: relative;
+}
+
+.btn-3d-1:hover {
+  background: hsl(16, 100%, 45%);
+}
+
+.btn-3d-1:active {
+  background: hsl(16, 100%, 40%);
+  left: -3px;
+  top: 3px;
+  box-shadow: -3px 3px hsl(16, 100%, 30%);
+}
+
+.btn-3d-1::before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+  border: solid 6px transparent;
+  border-right: solid 6px hsl(16, 100%, 30%);
+  border-left-width: 0px;
+  background: none;
+  top: 0px;
+  left: -6px;
+}
+
+.btn-3d-1::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+  border: solid 6px transparent;
+  border-top: solid 6px hsl(16, 100%, 30%);
+  border-bottom-width: 0px;
+  background: none;
+  right: 0;
+  bottom: -6px;
+}
+
+.btn-3d-1:active::before {
+  border: solid 3px transparent;
+  border-right: solid 3px hsl(16, 100%, 30%);
+  border-left-width: 0px;
+  left: -3px;
+}
+
+.btn-3d-1:active::after {
+  border: solid 3px transparent;
+  border-top: solid 3px hsl(16, 100%, 30%);
+  border-bottom-width: 0px;
+  bottom: -3px;
+}
+
+.btn-3d-2 {
+  background: var(--threeD2);
+  background: radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%));
+  border: 1px solid hsl(54, 100%, 20%);
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: relative;
+  text-shadow: 0 -1px 0 #c3af07;
 }
