@@ -15,8 +15,10 @@ body {
 }
 
 button {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--main-font);
   cursor: pointer;
+  outline: none;
+  margin: 10px;
 }
 
 /* ===================
@@ -83,7 +85,6 @@ button {
   padding: 10px 20px;
   font-weight: bold;
   box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
-  outline: none;
   position: relative;
 }
 
@@ -140,6 +141,8 @@ button {
   bottom: -3px;
 }
 
+/* 3D BUTTON 2 */
+
 .btn-3d-2 {
   background: var(--threeD2);
   background: radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%));
@@ -153,4 +156,183 @@ button {
   padding: 10px 20px;
   position: relative;
   text-shadow: 0 -1px 0 #c3af07;
+
+  box-shadow: inset 0 1px 0 hsl(54, 100%, 50%), 0 2px 0 hsl(54, 100%, 20%),
+    0 3px 0 hsl(54, 100%, 18%), 0 4px 0 hsl(54, 100%, 16%),
+    0 5px 0 hsl(54, 100%, 14%), 0 6px 0 hsl(54, 100%, 12%),
+    0 7px 0 hsl(54, 100%, 10%), 0 8px 0 hsl(54, 100%, 8%),
+    0 9px 0 hsl(54, 100%, 6%);
+}
+
+.btn-3d-2:hover {
+  background: var(--threeD2);
+  background: radial-gradient(hsl(54, 100%, 45%), hsl(54, 100%, 35%));
+}
+
+.btn-3d-2:active {
+  background: var(--threeD2);
+  background: radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%));
+  top: 2px;
+  box-shadow: inset 0 1px 0 hsl(54, 100%, 50%), 0 2px 0 hsl(54, 100%, 20%),
+    0 3px 0 hsl(54, 100%, 18%), 0 4px 0 hsl(54, 100%, 16%),
+    0 5px 0 hsl(54, 100%, 14%), 0 6px 0 hsl(54, 100%, 12%),
+    0 7px 0 hsl(54, 100%, 10%);
+}
+
+/* ===================
+ GRADIENT BUTTONS 
+ =====================*/
+
+/* GRADIENT BUTTON 1 */
+.gradient {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 20px 40px;
+  outline: none;
+  font-weight: 700;
+  font-size: 2rem;
+  box-sizing: border-box;
+  background-color: #e7eef1;
+  color: orangered;
+}
+
+.gradient-button-1 {
+  border: solid 10px transparent;
+  border-image: linear-gradient(to top right, orangered, yellow);
+  border-image-slice: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.gradient-button-1:hover {
+  color: white;
+  background: linear-gradient(to top right, orangered, yellow);
+}
+
+/* GRADIENT BUTTON 2 */
+
+.gradient-button-2 {
+  border: solid 5px transparent;
+  border-image: linear-gradient(to right, orangered, transparent);
+  border-image-slice: 1;
+  transition: all 0.5s ease;
+  /* border-right: none; */
+}
+
+.gradient-button-2:hover {
+  background-size: 100%;
+  color: white;
+  background: linear-gradient(to right, orangered, transparent);
+  border-right-style: none;
+}
+
+/* ===================
+ GRADIENT BUTTONS 
+ =====================*/
+
+/* ANIMATED BUTTON 1 */
+
+.animate {
+  padding: 20px 40px;
+  color: white;
+  font-weight: bold;
+  background: #00b3b4;
+  font-size: 2rem;
+  border: solid 0.5px #555;
+  position: relative;
+}
+
+.animated-button-1 {
+  background: url(pattern.png);
+  background-size: 40px 40px;
+}
+
+.animated-button-1:hover {
+  animation: loading 2s linear infinite;
+}
+
+/* ANIMATED BUTTON 2 */
+
+.animated-button-2 {
+  transition: all 0.3s ease;
+}
+
+.animated-button-2:after {
+  position: absolute;
+  top: 30%;
+  right: 0.6em;
+  content: "»";
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.animated-button-2:hover {
+  padding: 20px 60px 20px 20px;
+}
+
+.animated-button-2:hover:after {
+  right: 1.2em;
+  opacity: 1;
+}
+
+@keyframes loading {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+
+/* ===================
+ TOGGLE UI BUTTONS 
+ =====================*/
+
+/* TOGGLE BUTTON 1 */
+
+.toggle-1 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+}
+
+.toggle-1__input {
+  display: none;
+}
+
+.toggle-1__button {
+  position: relative;
+  font-size: 1.5rem;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2359a;
+  border: 1px solid #f2359a;
+  color: #fff;
+  width: 80px;
+  height: 30px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.toggle-1__button:before {
+  position: absolute;
+  top: 6px;
+  left: 40px;
+  content: "off";
+  display: inline-block;
+  height: 20px;
+  padding: 0 3px;
+  background-color: white;
+  color: #f2395a;
+  transition: all 0.3 ease;
+}
+
+.toggle-1__input:checked + .toggle-1__button {
+  background-color: #00b3b4;
+  border: 1px solid #00b3b4;
+}
+.toggle-1__input:checked + .toggle-1__button:before {
+  left: 5px;
+  content: "on";
+  color: #00b3b4;
 }
