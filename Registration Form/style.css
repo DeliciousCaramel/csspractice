@@ -52,10 +52,10 @@ body {
   border: solid 1px #f02146;
   border-bottom-width: 3px;
   cursor: pointer;
-  background-color: #f2395a;
-  background-size: 100%;
-  background-image: linear-gradient();
+  background: #f2395a;
   color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .register-block {

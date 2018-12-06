@@ -4,19 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Flexbox</title>
   </head>
   <body>
     <div class="wrapper">
-      <section class="layout-1"></section>
+      <section class="layout-1">
+        <h1>Flexbox Layout #1</h1>
+        <header class="bg-blue header-1">
+          <p>This is the <code class="element">header</code></p>
+        </header>
 
-      <section class="layout-2"></section>
+        <main class="flex-wrapper-1">
+          <article class="bg-blue article-1">
+            <p>
+              This is the <code class="element">article</code> it contains body
+              text such as Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Neque nihil alias eaque laboriosam error harum hic quis,
+              nisi commodi quo molestiae qui inventore esse similique animi
+              sequi adipisci nulla excepturi!
+            </p>
+          </article>
+          <aside class="bg-blue aside-1">
+            <p>
+              Let's throw in an <code class="element">aside</code> as our
+              content sidebar
+            </p>
+          </aside>
+        </main>
+        <footer class="bg-blue footer-1">
+          <p>
+            Of course, we cannot forget about the
+            <code class="element">footer</code>
+          </p>
+        </footer>
+      </section>
+
+      <br />
+
+      <section class="layout-2">
+        <h1>Flexbox Layout #2</h1>
+        <header class="bg-blue header-2">
+          <nav class="navbar">
+            <h2 class="logo">Logo</h2>
+            <ul>
+              <li class="nav-link"><a href="#">Home</a></li>
+              <li class="nav-link"><a href="#">About</a></li>
+              <li class="nav-link"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <main class="flex-wrapper-2">
+          <aside class="bg-blue aside-2  left-aside">
+            <p>
+              Let's throw in an <code class="element">aside</code> as our
+              content sidebar
+            </p>
+          </aside>
+          <article class="bg-blue article-2">
+            <p>
+              This is the <code class="element">article</code> it contains body
+              text such as Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Neque nihil alias eaque laboriosam error harum hic quis,
+              nisi commodi quo molestiae qui inventore esse similique animi
+              sequi adipisci nulla excepturi!
+            </p>
+          </article>
+          <aside class="bg-blue aside-2">
+            <p>
+              Let's throw in an <code class="element">aside</code> as our
+              content sidebar
+            </p>
+          </aside>
+        </main>
+        <footer class="bg-blue footer-1">
+          <p>
+            Of course, we cannot forget about the
+            <code class="element">footer</code>
+          </p>
+        </footer>
+      </section>
 
       <section class="layout-3"></section>
-
-      <section class="layout-4"></section>
-
-      <section class="layout-5"></section>
     </div>
   </body>
 </html>
